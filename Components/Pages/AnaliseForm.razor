@@ -61,9 +61,18 @@
                                                              Component="ExperienciaAgricultura"/>
                                             </RadzenColumn>
                                             <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenNumeric @bind-Value="dados.ExperienciaAgricultura"
-                                                               Placeholder="Anos de experiência" Style="width: 100%;"
-                                                               Name="ExperienciaAgricultura"/>
+                                                <RadzenFormField Style="width: 100%;">
+                                                    <ChildContent>
+                                                        <RadzenNumeric @bind-Value="dados.ExperienciaAgricultura"
+                                                                       Min="0"
+                                                                       Placeholder="Anos de experiência"
+                                                                       Style="width: 100%;"
+                                                                       Name="ExperienciaAgricultura"/>
+                                                    </ChildContent>
+                                                    <End>
+                                                        ANOS
+                                                    </End>
+                                                </RadzenFormField>
                                             </RadzenColumn>
                                         </RadzenRow>
 
@@ -74,27 +83,106 @@
                                             </RadzenColumn>
                                             <RadzenColumn Size="12" SizeMD="8">
                                                 <RadzenDropDown Data="@maquinario"
-                                                                Style="width: 100%; max-width: 400px;"
+                                                                Style="width: 100%;"
                                                                 TValue="string"
                                                                 Name="DropDownDisabledItem"/>
                                             </RadzenColumn>
                                         </RadzenRow>
 
-                                    </RadzenColumn>
-
-                                    <RadzenColumn>
-                                        <RadzenRow AlignItems="AlignItems.Center">
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
                                             <RadzenColumn Size="12" SizeMD="4">
                                                 <RadzenLabel Text="Grau de Tecnificação" Component="GrauTecnificacao"/>
                                             </RadzenColumn>
                                             <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenSlider @bind-Value="dados.GrauTecnificacao" Min="0" Max="10"
-                                                              Step="1"
-                                                              Style="width: 100%;"
-                                                              Name="GrauTecnificacao"/>
+                                                <RadzenDropDown Data="@grauTecnificacao"
+                                                                Style="width: 100%;"
+                                                                TValue="string"
+                                                                Name="GrauTecnificacao"/>
                                             </RadzenColumn>
                                         </RadzenRow>
-                                    </RadzenColumn>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Distância Unidade Lar"
+                                                             Component="DistanciaUnidadeLar"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenFormField Style="width: 100%;">
+                                                    <ChildContent>
+                                                        <RadzenNumeric
+                                                            Style="width: 100%;"
+                                                            Min="0"
+                                                            Name="DistanciaUnidadeLar"
+                                                            TValue="int"
+                                                        />
+                                                    </ChildContent>
+                                                    <End>
+                                                        KM
+                                                    </End>
+                                                </RadzenFormField>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Trava de Custos Contrato"
+                                                             Component="PercTravaCustosContrato"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenFormField Style="width: 100%;">
+                                                    <ChildContent>
+                                                        <RadzenNumeric
+                                                            Style="width: 100%;"
+                                                            Min="0"
+                                                            Name="PercTravaCustosContrato"
+                                                            TValue="int"
+                                                        />
+                                                    </ChildContent>
+                                                    <End>
+                                                        %
+                                                    </End>
+                                                </RadzenFormField>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Conceito Comunidade"
+                                                             Component="ConceitoComunidade"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenDropDown Data="@conceitos"
+                                                                Style="width: 100%;"
+                                                                TValue="string"
+                                                                Name="ConceitoComunidade"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Conceito Comercial"
+                                                             Component="ConceitoComercial"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenDropDown Data="@conceitos"
+                                                                Style="width: 100%;"
+                                                                TValue="string"
+                                                                Name="ConceitoComercial"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                    </RadzenColumn> <!-- Fim da primeira coluna -->
+
+                                    <RadzenColumn> <!-- Segunda coluna -->
+                                        <RadzenRow AlignItems="AlignItems.Center">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Grau de Tecnificação" Component="GrauTecn2ificacao"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenTextBox Style="width: 100%;" Name="CardHolder"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+                                    </RadzenColumn> <!-- Fim da segunda coluna -->
 
                                 </RadzenRow>
                             </RadzenStack>
@@ -121,6 +209,21 @@
         "Sim, totalmente",
         "Sim, parcialmente",
         "Não possui"
+    };
+
+    private List<string> grauTecnificacao = new()
+    {
+        "Alto",
+        "Médio",
+        "Baixo"
+    };
+
+    private List<string> conceitos = new()
+    {
+        "Excelente",
+        "Bom",
+        "Regular",
+        "Ruim"
     };
 
     public class DadosCredito
