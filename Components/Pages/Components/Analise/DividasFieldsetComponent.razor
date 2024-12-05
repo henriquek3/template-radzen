@@ -1,0 +1,43 @@
+﻿<RadzenCard Style="margin: 20px; padding: 20px;">
+    <Header>
+        <h3>Vencimentos - Edição Inline</h3>
+    </Header>
+    <Content>
+        <RadzenDataGrid TItem="Vencimento"
+                        Data="@vencimentos"
+                        EditMode="DataGridEditMode.Single"
+                        RowUpdate="@OnRowUpdate"
+                        AllowPaging="false"
+                        Style="width: 100%;">
+            <!-- Colunas -->
+            <Columns>
+                <!-- Coluna Vencimentos (não editável) -->
+                <RadzenDataGridColumn TItem="Vencimento" Property="Descricao" Title="Vencimentos"/>
+
+                <!-- Coluna Lar -->
+                <RadzenDataGridColumn TItem="Vencimento" Property="Lar" Title="Lar" Context="context">
+                    <EditTemplate Context="context">
+                        <RadzenNumeric @bind-Value="context.Lar"/>
+                    </EditTemplate>
+                </RadzenDataGridColumn>
+
+                <!-- Coluna Terceiros -->
+                <RadzenDataGridColumn TItem="Vencimento" Property="Terceiros" Title="Terceiros" Context="context">
+                    <EditTemplate Context="context">
+                        <RadzenNumeric @bind-Value="context.Terceiros"/>
+                    </EditTemplate>
+                </RadzenDataGridColumn>
+
+                <!-- Coluna Bancos -->
+                <RadzenDataGridColumn TItem="Vencimento" Property="Bancos" Title="Bancos" Context="context">
+                    <EditTemplate Context="context">
+                        <RadzenNumeric @bind-Value="context.Bancos"/>
+                    </EditTemplate>
+                </RadzenDataGridColumn>
+
+                <!-- Coluna Dívidas Totais (não editável, calculada) -->
+                <RadzenDataGridColumn TItem="Vencimento" Property="DividasTotais" Title="Dívidas Totais"/>
+            </Columns>
+        </RadzenDataGrid>
+    </Content>
+</RadzenCard>
