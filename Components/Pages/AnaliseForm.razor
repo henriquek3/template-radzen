@@ -1,0 +1,152 @@
+@page "/analise-form"
+
+<PageTitle>AnaliseForm</PageTitle>
+<RadzenRow>
+    <RadzenColumn Size="12">
+        <RadzenText Text="AnaliseForm" TextStyle="TextStyle.H3" TagName="TagName.H1"/>
+    </RadzenColumn>
+</RadzenRow>
+
+<RadzenRow>
+    <RadzenColumn>
+        <RadzenCard>
+            <RadzenTemplateForm Data="@dados">
+                <RadzenRow>
+                    <RadzenColumn>
+                        <RadzenFieldset Text="Dados Gerais">
+                            <RadzenStack Gap="1rem">
+                                <RadzenRow>
+                                    <RadzenColumn>
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Cliente" Component="Cliente"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenTextBox Placeholder="Cliente"
+                                                               Disabled="true"
+                                                               Style="width: 100%;" Name="Cliente"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Tipo de Cliente" Component="Tipo de Cliente"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenTextBox Placeholder="Tipo de Cliente"
+                                                               Disabled="true"
+                                                               Style="width: 100%;" Name="TCliente"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Estado Civil"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="6">
+                                                <RadzenTextBox Placeholder="Estado Civil"
+                                                               Disabled="true"
+                                                               Style="width:  100%;"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="2">
+                                                <RadzenTextBox Placeholder="Regime"
+                                                               Disabled="true"
+                                                               Style="width: 100%;"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Experiência na Agricultura"
+                                                             Component="ExperienciaAgricultura"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenNumeric @bind-Value="dados.ExperienciaAgricultura"
+                                                               Placeholder="Anos de experiência" Style="width: 100%;"
+                                                               Name="ExperienciaAgricultura"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Possui Maquinário"
+                                                             Component="Maquinario"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenDropDown Data="@maquinario"
+                                                                Style="width: 100%; max-width: 400px;"
+                                                                TValue="string"
+                                                                Name="DropDownDisabledItem"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                    </RadzenColumn>
+
+                                    <RadzenColumn>
+                                        <RadzenRow AlignItems="AlignItems.Center">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Grau de Tecnificação" Component="GrauTecnificacao"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenSlider @bind-Value="dados.GrauTecnificacao" Min="0" Max="10"
+                                                              Step="1"
+                                                              Style="width: 100%;"
+                                                              Name="GrauTecnificacao"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+                                    </RadzenColumn>
+
+                                </RadzenRow>
+                            </RadzenStack>
+                        </RadzenFieldset>
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
+                             class="rz-mt-8 rz-mb-4">
+                    <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="Save"/>
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Large"
+                                  Icon="cancel"
+                                  Text="Cancel" Click="@Cancel"/>
+                </RadzenStack>
+            </RadzenTemplateForm>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>
+
+@code {
+    private DadosCredito dados = new DadosCredito();
+
+    private List<string> maquinario = new()
+    {
+        "Sim, totalmente",
+        "Sim, parcialmente",
+        "Não possui"
+    };
+
+    public class DadosCredito
+    {
+        public string Cliente { get; set; }
+        public string TipoCliente { get; set; }
+        public string EstadoCivil { get; set; }
+        public string RegimeCasamento { get; set; }
+        public int? ExperienciaAgricultura { get; set; }
+        public bool MaquinarioProprio { get; set; }
+        public int? GrauTecnificacao { get; set; }
+        public double? DistanciaUnidade { get; set; }
+        public double? PercentualTravaCustos { get; set; }
+        public string ConceitoComunidade { get; set; }
+        public string ConceitoComercial { get; set; }
+        public double? ValorSolicitado { get; set; }
+    }
+
+    void Submit(DadosCredito arg)
+    {
+        //
+    }
+
+    void Cancel()
+    {
+        //
+    }
+
+}
