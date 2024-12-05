@@ -94,7 +94,7 @@
                                                 <RadzenLabel Text="Grau de Tecnificação" Component="GrauTecnificacao"/>
                                             </RadzenColumn>
                                             <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenDropDown Data="@grauTecnificacao"
+                                                <RadzenDropDown Data="@grau"
                                                                 Style="width: 100%;"
                                                                 TValue="string"
                                                                 Name="GrauTecnificacao"/>
@@ -102,6 +102,7 @@
                                         </RadzenRow>
 
                                         <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <!-- distância unidade lar | int -->
                                             <RadzenColumn Size="12" SizeMD="4">
                                                 <RadzenLabel Text="Distância Unidade Lar"
                                                              Component="DistanciaUnidadeLar"/>
@@ -121,9 +122,10 @@
                                                     </End>
                                                 </RadzenFormField>
                                             </RadzenColumn>
-                                        </RadzenRow>
+                                        </RadzenRow><!-- distância unidade lar | int -->
 
                                         <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <!-- Trava Custo | % -->
                                             <RadzenColumn Size="12" SizeMD="4">
                                                 <RadzenLabel Text="Trava de Custos Contrato"
                                                              Component="PercTravaCustosContrato"/>
@@ -143,7 +145,7 @@
                                                     </End>
                                                 </RadzenFormField>
                                             </RadzenColumn>
-                                        </RadzenRow>
+                                        </RadzenRow> <!-- Trava Custo | % -->
 
                                         <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
                                             <RadzenColumn Size="12" SizeMD="4">
@@ -174,14 +176,100 @@
                                     </RadzenColumn> <!-- Fim da primeira coluna -->
 
                                     <RadzenColumn> <!-- Segunda coluna -->
-                                        <RadzenRow AlignItems="AlignItems.Center">
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
                                             <RadzenColumn Size="12" SizeMD="4">
-                                                <RadzenLabel Text="Grau de Tecnificação" Component="GrauTecn2ificacao"/>
+                                                <RadzenLabel Text="Local" Component="localUnidade"/>
                                             </RadzenColumn>
                                             <RadzenColumn Size="12" SizeMD="8">
-                                                <RadzenTextBox Style="width: 100%;" Name="CardHolder"/>
+                                                <RadzenTextBox Style="width: 100%;" Placeholder="Unidade"
+                                                               Name="localUnidade" Disabled="true"/>
                                             </RadzenColumn>
                                         </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Individual ou Grupo" Component="IndivGrupoFam"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenDropDown Data="@indivGrupoFam"
+                                                                Style="width: 100%;"
+                                                                TValue="string"
+                                                                Name="IndivGrupoFam"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Cliente Desde" Component="ClienteDesde"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenTextBox Placeholder="Cliente Desde"
+                                                               Disabled="true"
+                                                               Style="width: 100%;" Name="Cliente"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Fidelidade Lar"
+                                                             Component="FidelLar"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenFormField Style="width: 100%;">
+                                                    <ChildContent>
+                                                        <RadzenNumeric
+                                                            Style="width: 100%;"
+                                                            Min="0"
+                                                            Name="FidelLar"
+                                                            TValue="int"
+                                                        />
+                                                    </ChildContent>
+                                                    <End>
+                                                        %
+                                                    </End>
+                                                </RadzenFormField>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Finalidade"
+                                                             Component="Finalidade"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenDropDown Data="@finalidadeAnalise"
+                                                                Style="width: 100%;"
+                                                                TValue="string"
+                                                                Name="Finalidade"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Cultura / Safra"
+                                                             Component="CulturaSafra"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenTextBox
+                                                    Style="width: 100%;"
+                                                    Placeholder="Cultura / Safra"
+                                                    Name="CulturaSafra"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
+                                        <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                            <RadzenColumn Size="12" SizeMD="4">
+                                                <RadzenLabel Text="Integrado Lar"
+                                                             Component="IntegradoLar"/>
+                                            </RadzenColumn>
+                                            <RadzenColumn Size="12" SizeMD="8">
+                                                <RadzenDropDown Data="@simNao"
+                                                                Style="width: 100%;"
+                                                                TValue="string"
+                                                                Name="IntegradoLar"/>
+                                            </RadzenColumn>
+                                        </RadzenRow>
+
                                     </RadzenColumn> <!-- Fim da segunda coluna -->
 
                                 </RadzenRow>
@@ -211,7 +299,7 @@
         "Não possui"
     };
 
-    private List<string> grauTecnificacao = new()
+    private List<string> grau = new()
     {
         "Alto",
         "Médio",
@@ -224,6 +312,33 @@
         "Bom",
         "Regular",
         "Ruim"
+    };
+
+    private List<string> indivGrupoFam = new()
+    {
+        "Individual",
+        "Grupo Familiar"
+    };
+
+    private List<string> simNao = new()
+    {
+        "Sim",
+        "Não"
+    };
+
+    List<string> finalidadeAnalise = new List<string>
+    {
+        "Custeio Bancario",
+        "Renegociacao Dividas",
+        "Analise Complementar",
+        "Analise Com Insumos Entregues",
+        "Adto Destino Credi",
+        "Lar Credi X Brde X Lar",
+        "Vendas De Insumos",
+        "Adiantamento",
+        "Limite De Credito Mensal",
+        "Maquinas Agricolas",
+        "Convenio Lar Credi X Safra"
     };
 
     public class DadosCredito
