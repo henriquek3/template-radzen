@@ -90,12 +90,12 @@
                                                     />
                                                 </RadzenColumn>
                                                 <RadzenColumn Size="12" SizeMD="1">
-                                                    <RadzenDatePicker 
-                                                        Name="RadzenDatePickerBindValue" 
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
                                                         TValue="DateTime"
                                                         DateFormat="MM/dd/yyyy"
-                                                        ShowCalendarWeek 
-                                                        />
+                                                        ShowCalendarWeek
+                                                    />
                                                 </RadzenColumn>
                                                 <RadzenColumn Size="12" SizeMD="1">
                                                     <RadzenTextBox Placeholder="Valor R$"
@@ -121,15 +121,701 @@
                                             </RadzenRow>
                                         </RadzenColumn>
                                     </RadzenRow>
+
+                                    <RadzenRow> <!-- AVAL -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="Aval" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- AVAL -->
+
+                                    <RadzenRow> <!-- CPRF com hipotéca -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="CPRF com hipotéca" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- CPRF com hipotéca -->
+
+                                    <RadzenRow> <!-- CPRF com Penhor -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="CPRF com Penhor" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- CPRF com Penhor -->
+
+                                    <RadzenRow> <!-- Hipoteca rotativa -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="Hipoteca rotativa" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- Hipoteca rotativa -->
+
+                                    <RadzenRow> <!-- NP -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="NP" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- NP -->
+
+                                    <RadzenRow> <!-- NPR -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="NPR" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- NPR -->
+
+                                    <RadzenRow> <!-- Produção em depósito na Lar -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="Produção em depósito na Lar"
+                                                                 Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- Produção em depósito na Lar -->
+
+                                    <RadzenRow> <!-- Reserva de dominio -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="Reserva de dominio" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- Reserva de dominio -->
+
+                                    <RadzenRow> <!-- Seguro Agrícola -->
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="Seguro Agrícola" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker
+                                                        Name="RadzenDatePickerBindValue"
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn>
+                                    </RadzenRow> <!-- Seguro Agrícola -->
+                                    
                                 </RadzenStack>
                             </ChildContent>
                         </RadzenFieldset>
                     </RadzenColumn>
                 </RadzenRow>
-                @*<RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
-                             class="rz-mt-8 rz-mb-4">
-                    <RadzenButton Icon="edit" Text="Editar Garantias"/>
-                </RadzenStack>*@
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
+                             class="rz-mt-4 rz-mb-2">
+                    <RadzenButton Icon="save" Text="Salvar Garantias"/>
+                </RadzenStack>
             </RadzenTemplateForm>
         </RadzenCard>
     </RadzenColumn>
