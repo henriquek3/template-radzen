@@ -534,7 +534,7 @@
                                 </RadzenStack>
                             </HeaderTemplate>
                             <ChildContent>
-                                <RadzenStack>
+                                <RadzenStack Gap="0">
                                     <RadzenRow>
                                         <RadzenColumn>
                                             <RadzenText TextAlign="TextAlign.Center">HISTÓRICO</RadzenText>
@@ -609,6 +609,109 @@
                                     </RadzenRow>
                                 </RadzenStack>
                             </ChildContent>
+                        </RadzenFieldset>
+                    </RadzenColumn>
+
+                    <RadzenColumn Offset="3" Size="9">
+                        <RadzenFieldset>
+                            <RadzenStack class="rz-mt-2">
+                                <RadzenRow>
+                                    <RadzenColumn Size="3">
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Renegociação à Vencer/Anterior?
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="3">
+                                        <RadzenDropDown Data="@renegociacaoVencerAnterior"
+                                                        Style="width: 100%;"
+                                                        TValue="string"
+                                                        Placeholder="--"
+                                                        Name="IntegradoLar"/>
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Assinou como aval?
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn>
+                                        <RadzenDropDown Data="@simNao"
+                                                        Style="width: 100%;"
+                                                        TValue="string"
+                                                        Placeholder="--"
+                                                        Name="IntegradoLar"/>
+                                    </RadzenColumn>
+
+                                    <!-- outra coluna -->
+
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Valor Comprometido
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            <RadzenTextBox Placeholder="R$" Style="width: 100%;"/>
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Score no Serasa
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            <RadzenTextBox Placeholder="0" Style="width: 100%;"/>
+                                        </RadzenText>
+                                    </RadzenColumn>
+
+                                    <!-- outra coluna -->
+
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Conceito em Bancos
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            <RadzenTextBox Style="width: 100%;"/>
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Restrições Serasa/AgRisk?
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn>
+                                        <RadzenDropDown Data="@restricaoSerasaAgrisk"
+                                                        Style="width: 100%;"
+                                                        TValue="string"
+                                                        Placeholder="--"
+                                                        Name="IntegradoLar"/>
+                                    </RadzenColumn>
+
+                                    <!-- outra coluna -->
+
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            Normalmente faz Seguro?
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                    <RadzenColumn>
+                                        <RadzenText TextAlign="TextAlign.Center">
+                                            <RadzenTextBox Style="width: 100%;"/>
+                                        </RadzenText>
+                                    </RadzenColumn>
+                                </RadzenRow>
+                            </RadzenStack>
                         </RadzenFieldset>
                     </RadzenColumn>
                 </RadzenRow>

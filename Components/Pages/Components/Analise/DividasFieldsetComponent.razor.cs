@@ -31,10 +31,24 @@ public partial class DividasFieldsetComponent : ComponentBase
         // Atualiza os valores calculados, se necessário
         StateHasChanged();
     }
-    
+
     private List<string> simNao = new()
     {
         "Sim",
         "Não"
+    };
+
+    private List<string> renegociacaoVencerAnterior = new()
+    {
+        "Não",
+        "Sim, pago em dia",
+        "Sim, pago em atraso"
+    };
+
+    private List<string> restricaoSerasaAgrisk = new()
+    {
+        "Sem restrições",
+        "Com restrições relevantes",
+        "Com restrições irrelevantes"
     };
 }
