@@ -1,361 +1,365 @@
 ﻿<RadzenRow>
-        <RadzenColumn>
-            <RadzenCard>
-                <RadzenTemplateForm Data="@dados">
-                    <RadzenRow>
-                        <RadzenColumn>
-                            <RadzenFieldset>
-                                <HeaderTemplate>
-                                    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
-                                        <RadzenIcon Icon="account_box"/>
-                                        <b>Dados Gerais</b>
-                                    </RadzenStack>
-                                </HeaderTemplate>
-                                <ChildContent>
-                                    <RadzenStack Gap="1rem">
-                                        <RadzenRow>
-                                            <RadzenColumn>
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Cliente" Component="Cliente"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenTextBox Placeholder="Cliente"
-                                                                       Disabled="true"
-                                                                       Style="width: 100%;" Name="Cliente"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
+    <RadzenColumn>
+        <RadzenCard>
+            <RadzenTemplateForm Data="@dados">
+                <RadzenRow>
+                    <RadzenColumn>
+                        <RadzenFieldset>
+                            <HeaderTemplate>
+                                <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
+                                    <RadzenIcon Icon="account_box"/>
+                                    <b>Dados Gerais</b>
+                                </RadzenStack>
+                            </HeaderTemplate>
+                            <ChildContent>
+                                <RadzenStack Gap="1rem">
+                                    <RadzenRow>
+                                        <RadzenColumn>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Cliente" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenTextBox Placeholder="Cliente"
+                                                                   Disabled="true"
+                                                                   Style="width: 100%;" Name="Cliente"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
 
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Tipo de Cliente"
-                                                                     Component="Tipo de Cliente"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenTextBox Placeholder="Tipo de Cliente"
-                                                                       Disabled="true"
-                                                                       Style="width: 100%;" Name="TCliente"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Tipo de Cliente"
+                                                                 Component="Tipo de Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenTextBox Placeholder="Tipo de Cliente"
+                                                                   Disabled="true"
+                                                                   Style="width: 100%;" Name="TCliente"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
 
-                                                <RadzenRow AlignItems="AlignItems.Center">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Estado Civil"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="6">
-                                                        <RadzenTextBox Placeholder="Estado Civil"
-                                                                       Disabled="true"
-                                                                       Style="width:  100%;"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="2">
-                                                        <RadzenTextBox Placeholder="Regime"
-                                                                       Disabled="true"
-                                                                       Style="width: 100%;"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
+                                            <RadzenRow AlignItems="AlignItems.Center">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Estado Civil"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="6">
+                                                    <RadzenTextBox Placeholder="Estado Civil"
+                                                                   Disabled="true"
+                                                                   Style="width:  100%;"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenTextBox Placeholder="Regime"
+                                                                   Disabled="true"
+                                                                   Style="width: 100%;"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
 
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Experiência na Agricultura"
-                                                                     Component="ExperienciaAgricultura"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenFormField Style="width: 100%;">
-                                                            <ChildContent>
-                                                                <RadzenNumeric TValue="int"
-                                                                               Min="0"
-                                                                               Placeholder="Anos de experiência"
-                                                                               Style="width: 100%;"
-                                                                               Name="ExperienciaAgricultura"/>
-                                                            </ChildContent>
-                                                            <End>
-                                                                ANOS
-                                                            </End>
-                                                        </RadzenFormField>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Possui Maquinário"
-                                                                     Component="Maquinario"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@maquinario"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="DropDownDisabledItem"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Grau de Tecnificação"
-                                                                     Component="GrauTecnificacao"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@grau"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="GrauTecnificacao"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <!-- distância unidade lar | int -->
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Distância Unidade Lar"
-                                                                     Component="DistanciaUnidadeLar"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenFormField Style="width: 100%;">
-                                                            <ChildContent>
-                                                                <RadzenNumeric
-                                                                    Style="width: 100%;"
-                                                                    Min="0"
-                                                                    Name="DistanciaUnidadeLar"
-                                                                    TValue="int"
-                                                                />
-                                                            </ChildContent>
-                                                            <End>
-                                                                KM
-                                                            </End>
-                                                        </RadzenFormField>
-                                                    </RadzenColumn>
-                                                </RadzenRow><!-- distância unidade lar | int -->
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <!-- Trava Custo | % -->
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Trava de Custos Contrato"
-                                                                     Component="PercTravaCustosContrato"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenFormField Style="width: 100%;">
-                                                            <ChildContent>
-                                                                <RadzenNumeric
-                                                                    Style="width: 100%;"
-                                                                    Min="0"
-                                                                    Name="PercTravaCustosContrato"
-                                                                    TValue="int"
-                                                                />
-                                                            </ChildContent>
-                                                            <End>
-                                                                %
-                                                            </End>
-                                                        </RadzenFormField>
-                                                    </RadzenColumn>
-                                                </RadzenRow> <!-- Trava Custo | % -->
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Conceito Comunidade"
-                                                                     Component="ConceitoComunidade"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@conceitos"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="ConceitoComunidade"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Conceito Comercial"
-                                                                     Component="ConceitoComercial"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@conceitos"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="ConceitoComercial"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                            </RadzenColumn> <!-- Fim da primeira coluna -->
-
-                                            <RadzenColumn> <!-- Segunda coluna -->
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Local" Component="localUnidade"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenTextBox Style="width: 100%;" Placeholder="Unidade"
-                                                                       Name="localUnidade" Disabled="true"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Individual ou Grupo"
-                                                                     Component="IndivGrupoFam"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@indivGrupoFam"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="IndivGrupoFam"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Cliente Desde" Component="ClienteDesde"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenTextBox Placeholder="Cliente Desde"
-                                                                       Disabled="true"
-                                                                       Style="width: 100%;" Name="Cliente"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Fidelidade Lar"
-                                                                     Component="FidelLar"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenFormField Style="width: 100%;">
-                                                            <ChildContent>
-                                                                <RadzenNumeric
-                                                                    Style="width: 100%;"
-                                                                    Min="0"
-                                                                    Name="FidelLar"
-                                                                    TValue="int"
-                                                                />
-                                                            </ChildContent>
-                                                            <End>
-                                                                %
-                                                            </End>
-                                                        </RadzenFormField>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Finalidade"
-                                                                     Component="Finalidade"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@finalidadeAnalise"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="Finalidade"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Cultura / Safra"
-                                                                     Component="CulturaSafra"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenTextBox
-                                                            Style="width: 100%;"
-                                                            Placeholder="Cultura / Safra"
-                                                            Name="CulturaSafra"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Integrado Lar"
-                                                                     Component="IntegradoLar"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@simNao"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="IntegradoLar"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Armazena na Propriedade"
-                                                                     Component="ArmazenaPropriedade"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@simNao"
-                                                                        Style="width: 100%;"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        TValue="string"
-                                                                        Name="ArmazenaPropriedade"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Conceito Subjetivo"
-                                                                     Component="ConceitoSubjetivo"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="8">
-                                                        <RadzenDropDown Data="@conceitos"
-                                                                        Style="width: 100%;"
-                                                                        TValue="string"
-                                                                        Placeholder="Escolha uma opção"
-                                                                        Name="ConceitoSubjetivo"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-
-                                                <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
-                                                    <RadzenColumn Size="12" SizeMD="4">
-                                                        <RadzenLabel Text="Capital Lar"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="6">
-                                                        <RadzenTextBox Placeholder="Valor"
-                                                                       Disabled="true"
-                                                                       Style="width:  100%;"/>
-                                                    </RadzenColumn>
-                                                    <RadzenColumn Size="12" SizeMD="2">
-                                                        <RadzenTextBox Placeholder="%"
-                                                                       Disabled="true"
-                                                                       Style="width: 100%;"/>
-                                                    </RadzenColumn>
-                                                </RadzenRow>
-                                            </RadzenColumn> <!-- Fim da segunda coluna -->
-                                        </RadzenRow>
-                                        <RadzenRow class="rz-mb-2 rz-mt-5">
-                                            <RadzenColumn Offset="4" Size="4">
-                                                <RadzenStack>
-                                                    <RadzenFieldset>
-                                                        <RadzenColumn Size="12" SizeMD="4">
-                                                            <RadzenLabel Text="Valor Solicitado"
-                                                                         Component="ValorSolicitado"/>
-                                                        </RadzenColumn>
-                                                        <RadzenColumn Size="12" SizeMD="8">
-                                                            <RadzenNumeric TValue="decimal"
-                                                                           Name="ValorSolicitado"
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Experiência na Agricultura"
+                                                                 Component="ExperienciaAgricultura"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenFormField Style="width: 100%;">
+                                                        <ChildContent>
+                                                            <RadzenNumeric TValue="int"
                                                                            Min="0"
-                                                                           Format="C2"
-                                                                           Currency="BRL"
-                                                                           Style="text-align: right;width: 100%;"/>
-                                                        </RadzenColumn>
-                                                    </RadzenFieldset>
-                                                </RadzenStack>
-                                            </RadzenColumn>
-                                        </RadzenRow>
-                                    </RadzenStack>
-                                </ChildContent>
-                            </RadzenFieldset>
-                        </RadzenColumn>
-                    </RadzenRow>
-                    @*<RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
-                                 class="rz-mt-8 rz-mb-4">
-                        <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="Save"/>
-                        <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Large"
-                                      Icon="cancel"
-                                      Text="Cancel" Click="@Cancel"/>
-                    </RadzenStack>*@
-                </RadzenTemplateForm>
-            </RadzenCard>
-        </RadzenColumn>
-    </RadzenRow>
+                                                                           Placeholder="Anos de experiência"
+                                                                           Style="width: 100%;"
+                                                                           Name="ExperienciaAgricultura"/>
+                                                        </ChildContent>
+                                                        <End>
+                                                            ANOS
+                                                        </End>
+                                                    </RadzenFormField>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Possui Maquinário"
+                                                                 Component="Maquinario"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@maquinario"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="DropDownDisabledItem"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Grau de Tecnificação"
+                                                                 Component="GrauTecnificacao"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@grau"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="GrauTecnificacao"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <!-- distância unidade lar | int -->
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Distância Unidade Lar"
+                                                                 Component="DistanciaUnidadeLar"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenFormField Style="width: 100%;">
+                                                        <ChildContent>
+                                                            <RadzenNumeric
+                                                                Style="width: 100%;"
+                                                                Min="0"
+                                                                Name="DistanciaUnidadeLar"
+                                                                TValue="int"
+                                                            />
+                                                        </ChildContent>
+                                                        <End>
+                                                            KM
+                                                        </End>
+                                                    </RadzenFormField>
+                                                </RadzenColumn>
+                                            </RadzenRow><!-- distância unidade lar | int -->
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <!-- Trava Custo | % -->
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Trava de Custos Contrato"
+                                                                 Component="PercTravaCustosContrato"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenFormField Style="width: 100%;">
+                                                        <ChildContent>
+                                                            <RadzenNumeric
+                                                                Style="width: 100%;"
+                                                                Min="0"
+                                                                Name="PercTravaCustosContrato"
+                                                                TValue="int"
+                                                            />
+                                                        </ChildContent>
+                                                        <End>
+                                                            %
+                                                        </End>
+                                                    </RadzenFormField>
+                                                </RadzenColumn>
+                                            </RadzenRow> <!-- Trava Custo | % -->
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Conceito Comunidade"
+                                                                 Component="ConceitoComunidade"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@conceitos"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="ConceitoComunidade"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Conceito Comercial"
+                                                                 Component="ConceitoComercial"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@conceitos"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="ConceitoComercial"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                        </RadzenColumn> <!-- Fim da primeira coluna -->
+
+                                        <RadzenColumn> <!-- Segunda coluna -->
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Local" Component="localUnidade"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenTextBox Style="width: 100%;" Placeholder="Unidade"
+                                                                   Name="localUnidade" Disabled="true"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Individual ou Grupo"
+                                                                 Component="IndivGrupoFam"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@indivGrupoFam"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="IndivGrupoFam"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Cliente Desde" Component="ClienteDesde"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenTextBox Placeholder="Cliente Desde"
+                                                                   Disabled="true"
+                                                                   Style="width: 100%;" Name="Cliente"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Fidelidade Lar"
+                                                                 Component="FidelLar"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenFormField Style="width: 100%;">
+                                                        <ChildContent>
+                                                            <RadzenNumeric
+                                                                Style="width: 100%;"
+                                                                Min="0"
+                                                                Name="FidelLar"
+                                                                TValue="int"
+                                                            />
+                                                        </ChildContent>
+                                                        <End>
+                                                            %
+                                                        </End>
+                                                    </RadzenFormField>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Finalidade"
+                                                                 Component="Finalidade"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@finalidadeAnalise"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="Finalidade"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Cultura / Safra"
+                                                                 Component="CulturaSafra"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenTextBox
+                                                        Style="width: 100%;"
+                                                        Placeholder="Cultura / Safra"
+                                                        Name="CulturaSafra"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Integrado Lar"
+                                                                 Component="IntegradoLar"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="IntegradoLar"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Armazena na Propriedade"
+                                                                 Component="ArmazenaPropriedade"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    TValue="string"
+                                                                    Name="ArmazenaPropriedade"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Conceito Subjetivo"
+                                                                 Component="ConceitoSubjetivo"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="8">
+                                                    <RadzenDropDown Data="@conceitos"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="Escolha uma opção"
+                                                                    Name="ConceitoSubjetivo"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="4">
+                                                    <RadzenLabel Text="Capital Lar"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="6">
+                                                    <RadzenTextBox Placeholder="Valor"
+                                                                   Disabled="true"
+                                                                   Style="width:  100%;"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenTextBox Placeholder="%"
+                                                                   Disabled="true"
+                                                                   Style="width: 100%;"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
+                                        </RadzenColumn> <!-- Fim da segunda coluna -->
+                                    </RadzenRow>
+                                    <RadzenRow class="rz-mb-2 rz-mt-5">
+                                        <RadzenColumn Offset="4" Size="4">
+                                            <RadzenStack>
+                                                <RadzenFieldset>
+                                                    <RadzenColumn Size="12" SizeMD="4">
+                                                        <RadzenLabel Text="Valor Solicitado"
+                                                                     Component="ValorSolicitado"/>
+                                                    </RadzenColumn>
+                                                    <RadzenColumn Size="12" SizeMD="8">
+                                                        <RadzenNumeric TValue="decimal"
+                                                                       Name="ValorSolicitado"
+                                                                       Min="0"
+                                                                       Format="C2"
+                                                                       Currency="BRL"
+                                                                       Style="text-align: right;width: 100%;"/>
+                                                    </RadzenColumn>
+                                                </RadzenFieldset>
+                                            </RadzenStack>
+                                        </RadzenColumn>
+                                    </RadzenRow>
+                                </RadzenStack>
+                            </ChildContent>
+                        </RadzenFieldset>
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenStack
+                    Orientation="Orientation.Horizontal"
+                    JustifyContent="JustifyContent.Center"
+                    class="rz-mt-4 rz-mb-4"
+                >
+                    <RadzenButton
+                        ButtonType="ButtonType.Submit"
+                        Icon="save"
+                        Text="Salvar Dados Gerais"
+                    />
+                </RadzenStack>
+            </RadzenTemplateForm>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>
