@@ -12,45 +12,113 @@
                                 </RadzenStack>
                             </HeaderTemplate>
                             <ChildContent>
-                                <RadzenStack Gap="1rem" class="rz-overflow-auto">
+                                <RadzenStack Gap="1rem">
+                                    <RadzenRow>
+                                        <RadzenColumn Size="2"></RadzenColumn>
+                                        <RadzenColumn Size="1">
+                                            <RadzenText TextAlign="TextAlign.Center">Penhorável</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn Size="1">
+                                            <RadzenText TextAlign="TextAlign.Center">Matrícula</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Área (ha)</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Ano Safra</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Produto</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Tipo de Solo</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Vencimento</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Valor R$</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Onerado(a)?</RadzenText>
+                                        </RadzenColumn>
+                                        <RadzenColumn>
+                                            <RadzenText TextAlign="TextAlign.Center">Documento?</RadzenText>
+                                        </RadzenColumn>
+                                    </RadzenRow>
                                     <RadzenRow>
                                         <RadzenColumn>
-                                            <RadzenDataGrid TItem="Garantia"
-                                                            Data="@_garantias"
-                                                            AllowSorting="true"
-                                                            Density="Density.Compact"
-                                                            Responsive="true"
-                                                            AllowFiltering="true"
-                                                            AllowPaging="true"
-                                                            PageSize="10"
-                                            >
-                                                <!-- Colunas -->
-                                                <Columns>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="TipoGarantia"
-                                                                          Title="Garantia"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="Penhoravel"
-                                                                          Title="Penhorável"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="Matricula"
-                                                                          Title="Matrícula"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="Area"
-                                                                          Title="Área (ha)"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="AnoSafra"
-                                                                          Title="Ano Safra"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="Produto"
-                                                                          Title="Produto"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="TipoSolo"
-                                                                          Title="Tipo de Solo"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="Vencimento"
-                                                                          Title="Vencimento"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="Valor"
-                                                                          Title="Valor R$" FormatString="C2"/>
-                                                    <RadzenDataGridColumn TItem="Garantia" Property="EstaOnerado"
-                                                                          Title="Está Onerado(a)?"/>
-                                                    <RadzenDataGridColumn TItem="Garantia"
-                                                                          Property="AnexouDocumento"
-                                                                          Title="Anexou Documento?"/>
-                                                </Columns>
-                                            </RadzenDataGrid>
+                                            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                                                <RadzenColumn Size="12" SizeMD="2">
+                                                    <RadzenLabel Text="Alienação Fiduciária" Component="Cliente"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Penhoravel"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Matrícula"
+                                                                   Style="width: 100%;"
+                                                                   Name="Matricula"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Área (ha)"
+                                                                   Style="width: 100%;"
+                                                                   Name="Area"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Ano Safra"
+                                                                   Style="width: 100%;"
+                                                                   Name="AnoSafra"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Produto"
+                                                                   Style="width: 100%;"
+                                                                   Name="Produto"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Tipo Solo"
+                                                                   Style="width: 100%;"
+                                                                   Name="TipoSolo"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDatePicker 
+                                                        Name="RadzenDatePickerBindValue" 
+                                                        TValue="DateTime"
+                                                        DateFormat="MM/dd/yyyy"
+                                                        ShowCalendarWeek 
+                                                        />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenTextBox Placeholder="Valor R$"
+                                                                   Style="width: 100%;"
+                                                                   Disabled="true"
+                                                                   Name="Valor"
+                                                    />
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Onerado"/>
+                                                </RadzenColumn>
+                                                <RadzenColumn Size="12" SizeMD="1">
+                                                    <RadzenDropDown Data="@simNao"
+                                                                    Style="width: 100%;"
+                                                                    TValue="string"
+                                                                    Placeholder="--"
+                                                                    Name="Documento"/>
+                                                </RadzenColumn>
+                                            </RadzenRow>
                                         </RadzenColumn>
                                     </RadzenRow>
                                 </RadzenStack>
@@ -58,10 +126,10 @@
                         </RadzenFieldset>
                     </RadzenColumn>
                 </RadzenRow>
-                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
+                @*<RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
                              class="rz-mt-8 rz-mb-4">
                     <RadzenButton Icon="edit" Text="Editar Garantias"/>
-                </RadzenStack>
+                </RadzenStack>*@
             </RadzenTemplateForm>
         </RadzenCard>
     </RadzenColumn>

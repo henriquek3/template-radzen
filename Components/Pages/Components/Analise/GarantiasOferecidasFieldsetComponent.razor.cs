@@ -4,6 +4,12 @@ namespace Front.Components.Pages.Components.Analise;
 
 public partial class GarantiasOferecidasFieldsetComponent : ComponentBase
 {
+    private List<string> simNao = new()
+    {
+        "Sim",
+        "Não"
+    };
+    
     private DadosCredito dados = new DadosCredito();
 
     public class Garantia
