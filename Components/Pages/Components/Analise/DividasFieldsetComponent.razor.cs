@@ -31,4 +31,10 @@ public partial class DividasFieldsetComponent : ComponentBase
         // Atualiza os valores calculados, se necessário
         StateHasChanged();
     }
+    
+    private List<string> simNao = new()
+    {
+        "Sim",
+        "Não"
+    };
 }
