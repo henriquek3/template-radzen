@@ -1,0 +1,53 @@
+﻿@page "/AnaliseCreditoFormTablePage"
+@using Front.Components.Pages.Components
+
+<RadzenStack>
+    <RadzenRow>
+        <RadzenColumn Size="11">
+            <RadzenStack JustifyContent="JustifyContent.Normal" AlignItems="AlignItems.Start">
+                <RadzenText TagName="TagName.H4" TextStyle="TextStyle.DisplayH4">Análise de Crédito</RadzenText>
+            </RadzenStack>
+        </RadzenColumn>
+        <RadzenColumn Size="1" Style="text-align: right">
+            <RadzenLink Path="AnaliseIndexPage">
+                <RadzenButton ButtonStyle="ButtonStyle.Info" Icon="add_circle">Voltar</RadzenButton>
+            </RadzenLink>
+        </RadzenColumn>
+    </RadzenRow>
+</RadzenStack>
+
+<RadzenRow>
+    <RadzenColumn SizeMD="12">
+        <RadzenCard>
+            <RadzenRow AlignItems="AlignItems.Center" class="rz-mb-2">
+                
+                <RadzenColumn Size="12" SizeMD="3">
+                    <RadzenLabel Text="Para Começar Informe a Matrícula" Component="Matricula"/>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeMD="9">
+                    <RadzenTextBox Placeholder="Matrícula"
+                                   Style="width: 100%;" Name="Matricula"/>
+                </RadzenColumn>
+            </RadzenRow>
+
+            <!--suppress CssUnresolvedCustomProperty -->
+            <RadzenStack
+                Style="border-top: var(--rz-panel-menu-item-border);"
+                Orientation="Orientation.Horizontal"
+                JustifyContent="JustifyContent.Center"
+                Gap="1rem"
+                class="rz-mt-3 rz-pt-3"
+            >
+                <RadzenButton Icon="save" Text="Criar Análise"/>
+            </RadzenStack>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>
+
+<RadzenRow>
+    <RadzenColumn SizeMD="12">
+        <RadzenCard>
+            <AnaliseTableComponent/>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>

@@ -1,0 +1,25 @@
+﻿@page "/AnaliseIndexPage"
+@using Front.Components.Pages.Components
+
+<RadzenStack>
+    <RadzenRow>
+        <RadzenColumn Size="11">
+            <RadzenStack JustifyContent="JustifyContent.Normal" AlignItems="AlignItems.Start">
+                <RadzenText TagName="TagName.H4" TextStyle="TextStyle.DisplayH4">Análise de Crédito</RadzenText>
+            </RadzenStack>
+        </RadzenColumn>
+        <RadzenColumn Size="1" Style="text-align: right">
+            <RadzenLink Path="AnaliseCreatePage">
+                <RadzenButton ButtonStyle="ButtonStyle.Primary" Icon="add_circle">Adicionar</RadzenButton>
+            </RadzenLink>
+        </RadzenColumn>
+    </RadzenRow>
+</RadzenStack>
+
+<RadzenRow>
+    <RadzenColumn SizeMD="12">
+        <RadzenCard>
+            <AnaliseTableComponent/>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>

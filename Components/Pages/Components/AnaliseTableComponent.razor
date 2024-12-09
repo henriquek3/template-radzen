@@ -1,0 +1,91 @@
+﻿<RadzenDataGrid FilterText="Filtro"
+                Data="@analiseCreditos"
+                AllowFiltering="true"
+                AllowPaging="true"
+                PageSize=5
+                PageSizeOptions="@(new int[] { 5, 10, 25, 50, 100 })"
+                PagerHorizontalAlign="HorizontalAlign.Center"
+                ColumnWidth="200px"
+                Responsive="true"
+                PageSizeText="Itens/página"
+                EmptyText="Nenhum item encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="@nameof(AnaliseCreditoModel.Cliente)" Filterable="true" Title="Cliente"
+                              Width="170px">
+            <Template Context="dados">
+                <RadzenText><b>@dados.Cliente</b></RadzenText>
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn
+            Property="@nameof(AnaliseCreditoModel.ValorSolicitado)"
+            Title="Valor Solicitado"
+            Width="50px"
+        />
+        <RadzenDataGridColumn Property="@nameof(AnaliseCreditoModel.ConceitoComercial)" Title="Conceito Comercial"
+                              Width="50px"/>
+
+        <RadzenDataGridColumn Property="@nameof(AnaliseCreditoModel.Id)" Title="Opções" Width="10%">
+            <Template Context="data">
+                <RadzenLink Path="AnaliseCreatePage">
+                    <RadzenButton Icon="edit_document" IconColor="white"/>
+                </RadzenLink>
+                <RadzenButton Icon="delete" IconColor="white"/>
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+@code {
+
+    public class AnaliseCreditoModel
+    {
+        public Guid Id { get; set; }
+        public string Cliente { get; set; }
+        public string TipoCliente { get; set; }
+        public string EstadoCivil { get; set; }
+        public string RegimeCasamento { get; set; }
+        public int ExperienciaAgricultura { get; set; }
+        public bool MaquinarioProprio { get; set; }
+        public string GrauTecnificacao { get; set; }
+        public int DistanciaUnidadeLar { get; set; }
+        public decimal PercentualTravaCustos { get; set; }
+        public string ConceitoComunidade { get; set; }
+        public string ConceitoComercial { get; set; }
+        public decimal ValorSolicitado { get; set; }
+    }
+    
+    private List<AnaliseCreditoModel> analiseCreditos = new List<AnaliseCreditoModel>
+    {
+        new AnaliseCreditoModel
+        {
+            Cliente = "João Silva",
+            TipoCliente = "Pessoa Física",
+            EstadoCivil = "Casado",
+            RegimeCasamento = "Comunhão Parcial",
+            ExperienciaAgricultura = 10,
+            MaquinarioProprio = true,
+            GrauTecnificacao = "Avançado",
+            DistanciaUnidadeLar = 15,
+            PercentualTravaCustos = 30.5m,
+            ConceitoComunidade = "Excelente",
+            ConceitoComercial = "Ótimo",
+            ValorSolicitado = 50000m
+        },
+        new AnaliseCreditoModel
+        {
+            Cliente = "Maria Oliveira",
+            TipoCliente = "Pessoa Jurídica",
+            EstadoCivil = "N/A",
+            RegimeCasamento = "N/A",
+            ExperienciaAgricultura = 5,
+            MaquinarioProprio = false,
+            GrauTecnificacao = "Médio",
+            DistanciaUnidadeLar = 20,
+            PercentualTravaCustos = 25.0m,
+            ConceitoComunidade = "Bom",
+            ConceitoComercial = "Regular",
+            ValorSolicitado = 75000m
+        }
+    };
+
+}
