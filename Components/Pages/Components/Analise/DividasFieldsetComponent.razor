@@ -715,8 +715,14 @@
                         </RadzenFieldset>
                     </RadzenColumn>
                 </RadzenRow>
-                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
-                             class="rz-mt-4 rz-mb-2">
+                <!--suppress CssUnresolvedCustomProperty -->
+                <RadzenStack 
+                    Orientation="Orientation.Horizontal" 
+                    JustifyContent="JustifyContent.Center" 
+                    Gap="1rem"
+                    class="rz-mt-3 rz-pt-3"
+                    Style="border-top: var(--rz-panel-menu-item-border);"
+                    >
                     <RadzenButton Icon="save" Text="Salvar Dívidas"/>
                 </RadzenStack>
             </RadzenTemplateForm>
