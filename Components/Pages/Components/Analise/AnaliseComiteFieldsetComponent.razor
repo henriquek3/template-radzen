@@ -9,9 +9,192 @@
                     </RadzenStack>
                 </HeaderTemplate>
                 <ChildContent>
-                    <h1>Análise do Comitê</h1>
-                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
-                                 class="rz-mt-4 rz-mb-2">
+                    <RadzenStack Gap="1rem">
+                        <RadzenRow>
+                            <RadzenColumn></RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>Data</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>Nome</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>Comentário</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>Aprovação</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                        </RadzenRow>
+
+                        <RadzenRow> <!-- Financeiro -->
+                            <RadzenColumn>
+                                <RadzenText>
+                                    <strong>FINANCEIRO</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenDatePicker
+                                    Style="width: 100%;"
+                                    DateFormat="dd/MM/yyyy"
+                                    TValue="DateTime"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Nome"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Comentário"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Aprovação"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                        </RadzenRow> <!-- Financeiro -->
+
+                        <RadzenRow> <!-- Gerente -->
+                            <RadzenColumn>
+                                <RadzenText>
+                                    <strong>GERENTE</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenDatePicker
+                                    Style="width: 100%;"
+                                    DateFormat="dd/MM/yyyy"
+                                    TValue="DateTime"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Nome"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Comentário"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Aprovação"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                        </RadzenRow> <!-- Gerente -->
+
+                        <RadzenRow> <!-- espaço -->
+                            <RadzenColumn><br/></RadzenColumn>
+                            <RadzenColumn></RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center" Style="color: #b32121"><strong>X</strong></RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn></RadzenColumn>
+                            <RadzenColumn></RadzenColumn>
+                        </RadzenRow> <!-- espaço -->
+
+                        <RadzenRow> <!-- Gerencial -->
+                            <RadzenColumn>
+                                <RadzenText>
+                                    <strong>GERENCIAL</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenDatePicker
+                                    Style="width: 100%;"
+                                    DateFormat="dd/MM/yyyy"
+                                    TValue="DateTime"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Nome"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Comentário"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Aprovação"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                        </RadzenRow> <!-- Gerencial -->
+
+                        <RadzenRow> <!-- ESTRATÉGICO -->
+                            <RadzenColumn>
+                                <RadzenText>
+                                    <strong>ESTRATÉGICO</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenDatePicker
+                                    Style="width: 100%;"
+                                    DateFormat="dd/MM/yyyy"
+                                    TValue="DateTime"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Nome"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Comentário"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="Aprovação"
+                                    TValue="string"
+                                />
+                            </RadzenColumn>
+                        </RadzenRow> <!-- ESTRATÉGICO -->
+                    </RadzenStack>
+
+                    <!--suppress CssUnresolvedCustomProperty -->
+                    <RadzenStack Style="border-top: var(--rz-panel-menu-item-border);"
+                                 Orientation="Orientation.Horizontal"
+                                 JustifyContent="JustifyContent.Center"
+                                 Gap="1rem"
+                                 class="rz-mt-3 rz-pt-3">
                         <RadzenButton Icon="save" Text="Salvar Análise do Comitê"/>
                     </RadzenStack>
                 </ChildContent>
