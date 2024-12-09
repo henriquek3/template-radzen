@@ -14,26 +14,27 @@
                             <ChildContent>
                                 <RadzenStack Gap="0.25rem">
                                     <RadzenRow>
-                                        <RadzenColumn Size="4">
-                                            <RadzenText TextAlign="TextAlign.Center">VENCIMENTOS</RadzenText>
+                                        <RadzenColumn Size="4"></RadzenColumn>
+                                        <RadzenColumn Size="2">
+                                            <RadzenText TextAlign="TextAlign.Center"><strong>LAR</strong></RadzenText>
                                         </RadzenColumn>
                                         <RadzenColumn Size="2">
-                                            <RadzenText TextAlign="TextAlign.Center">LAR</RadzenText>
+                                            <RadzenText TextAlign="TextAlign.Center"><strong>TERCEIROS</strong>
+                                            </RadzenText>
                                         </RadzenColumn>
                                         <RadzenColumn Size="2">
-                                            <RadzenText TextAlign="TextAlign.Center">TERCEIROS</RadzenText>
+                                            <RadzenText TextAlign="TextAlign.Center"><strong>BANCOS</strong>
+                                            </RadzenText>
                                         </RadzenColumn>
                                         <RadzenColumn Size="2">
-                                            <RadzenText TextAlign="TextAlign.Center">BANCOS</RadzenText>
-                                        </RadzenColumn>
-                                        <RadzenColumn Size="2">
-                                            <RadzenText TextAlign="TextAlign.Center">DÍVIDAS TOTAIS</RadzenText>
+                                            <RadzenText TextAlign="TextAlign.Center">
+                                                <strong>DÍVIDAS&nbsp;TOTAIS</strong></RadzenText>
                                         </RadzenColumn>
                                     </RadzenRow>
 
-                                    <RadzenRow>
+                                    <RadzenRow> <!--Vencidos-->
                                         <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                            <RadzenLabel Text="Vencidos" Component="Cliente"/>
+                                            <RadzenText><strong>Vencidos</strong></RadzenText>
                                         </RadzenColumn>
 
                                         <RadzenColumn Size="12" SizeMD="2">
@@ -97,11 +98,11 @@
                                                 </ChildContent>
                                             </RadzenFormField>
                                         </RadzenColumn>
-                                    </RadzenRow>
+                                    </RadzenRow><!--Vencidos-->
 
-                                    <RadzenRow>
+                                    <RadzenRow> <!--A Vencer 1 Ano-->
                                         <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                            <RadzenLabel Text="A vencer 1 ano" Component="Cliente"/>
+                                            <RadzenText><strong>A Vencer 1 Ano</strong></RadzenText>
                                         </RadzenColumn>
 
                                         <RadzenColumn Size="12" SizeMD="2">
@@ -166,13 +167,13 @@
                                             </RadzenFormField>
                                         </RadzenColumn>
 
-                                    </RadzenRow>
+                                    </RadzenRow> <!--A Vencer 1 Ano-->
 
-                                    <RadzenRow>
+                                    <RadzenRow>  <!--A Vencer 2 Anos-->
                                         <RadzenColumn>
                                             <RadzenRow AlignItems="AlignItems.Center">
                                                 <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                                    <RadzenLabel Text="A vencer 2 anos" Component="Cliente"/>
+                                                    <RadzenText><strong>A Vencer 2 Anos</strong></RadzenText>
                                                 </RadzenColumn>
 
                                                 <RadzenColumn Size="12" SizeMD="2">
@@ -239,13 +240,13 @@
 
                                             </RadzenRow>
                                         </RadzenColumn>
-                                    </RadzenRow>
+                                    </RadzenRow> <!--A Vencer 2 Anos-->
 
-                                    <RadzenRow>
+                                    <RadzenRow> <!--A vencer 3 anos-->
                                         <RadzenColumn>
                                             <RadzenRow AlignItems="AlignItems.Center">
                                                 <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                                    <RadzenLabel Text="A vencer 3 anos" Component="Cliente"/>
+                                                    <RadzenText><strong>A Vencer 3 Anos</strong></RadzenText>
                                                 </RadzenColumn>
 
                                                 <RadzenColumn Size="12" SizeMD="2">
@@ -312,11 +313,11 @@
 
                                             </RadzenRow>
                                         </RadzenColumn>
-                                    </RadzenRow>
+                                    </RadzenRow> <!--A vencer 3 anos-->
 
                                     <RadzenRow>
                                         <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                            <RadzenLabel Text="A vencer 4 anos" Component="Cliente"/>
+                                            <RadzenText><strong>A Vencer 4 Anos</strong></RadzenText>
                                         </RadzenColumn>
 
                                         <RadzenColumn Size="12" SizeMD="2">
@@ -380,11 +381,11 @@
                                                 </ChildContent>
                                             </RadzenFormField>
                                         </RadzenColumn>
-                                    </RadzenRow>
+                                    </RadzenRow> <!--A vencer 4 anos-->
 
-                                    <RadzenRow>
+                                    <RadzenRow> <!--A vencer > 4 anos-->
                                         <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                            <RadzenLabel Text="A vencer > 4 anos" Component="Cliente"/>
+                                            <RadzenText><strong>A vencer > 4 anos</strong></RadzenText>
                                         </RadzenColumn>
 
                                         <RadzenColumn Size="12" SizeMD="2">
@@ -448,11 +449,11 @@
                                                 </ChildContent>
                                             </RadzenFormField>
                                         </RadzenColumn>
-                                    </RadzenRow>
+                                    </RadzenRow> <!--A vencer > 4 anos-->
 
-                                    <RadzenRow>
+                                    <RadzenRow JustifyContent="JustifyContent.Center"> <!--Total-->
                                         <RadzenColumn Size="12" SizeMD="4" Style="text-align: center">
-                                            <RadzenLabel Text="Total" Component="Cliente"/>
+                                            <RadzenText><strong>Total</strong></RadzenText>
                                         </RadzenColumn>
 
                                         <RadzenColumn Size="12" SizeMD="2">
@@ -519,13 +520,14 @@
                                             </RadzenFormField>
                                         </RadzenColumn>
 
-                                    </RadzenRow>
+                                    </RadzenRow> <!--Total-->
 
                                 </RadzenStack>
                             </ChildContent>
                         </RadzenFieldset>
                     </RadzenColumn>
-                    <RadzenColumn Size="4">
+
+                    <RadzenColumn Size="4"> <!-- Histórico Pagamento Lar -->
                         <RadzenFieldset>
                             <HeaderTemplate>
                                 <RadzenStack Orientation="Orientation.Horizontal">
@@ -537,10 +539,11 @@
                                 <RadzenStack Gap="0">
                                     <RadzenRow>
                                         <RadzenColumn>
-                                            <RadzenText TextAlign="TextAlign.Center">HISTÓRICO</RadzenText>
+                                            <RadzenText TextAlign="TextAlign.Center"><strong>HISTÓRICO</strong>
+                                            </RadzenText>
                                         </RadzenColumn>
                                         <RadzenColumn>
-                                            <RadzenText TextAlign="TextAlign.Center">OPÇÃO</RadzenText>
+                                            <RadzenText TextAlign="TextAlign.Center"><strong>OPÇÃO</strong></RadzenText>
                                         </RadzenColumn>
                                     </RadzenRow>
                                     <RadzenRow>
@@ -610,9 +613,9 @@
                                 </RadzenStack>
                             </ChildContent>
                         </RadzenFieldset>
-                    </RadzenColumn>
+                    </RadzenColumn><!-- Histórico Pagamento Lar -->
 
-                    <RadzenColumn Offset="3" Size="9">
+                    <RadzenColumn Offset="3" Size="9"> <!-- Renegociação à Vencer/Anterior? -->
                         <RadzenFieldset>
                             <RadzenStack class="rz-mt-2">
                                 <RadzenRow>
@@ -713,16 +716,16 @@
                                 </RadzenRow>
                             </RadzenStack>
                         </RadzenFieldset>
-                    </RadzenColumn>
+                    </RadzenColumn> <!-- Renegociação à Vencer/Anterior? -->
                 </RadzenRow>
                 <!--suppress CssUnresolvedCustomProperty -->
-                <RadzenStack 
-                    Orientation="Orientation.Horizontal" 
-                    JustifyContent="JustifyContent.Center" 
+                <RadzenStack
+                    Orientation="Orientation.Horizontal"
+                    JustifyContent="JustifyContent.Center"
                     Gap="1rem"
                     class="rz-mt-3 rz-pt-3"
                     Style="border-top: var(--rz-panel-menu-item-border);"
-                    >
+                >
                     <RadzenButton Icon="save" Text="Salvar Dívidas"/>
                 </RadzenStack>
             </RadzenTemplateForm>
