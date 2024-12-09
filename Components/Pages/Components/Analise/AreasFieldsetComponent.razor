@@ -9,9 +9,250 @@
                     </RadzenStack>
                 </HeaderTemplate>
                 <ChildContent>
-                    <h1>Áreas</h1>
-                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
-                                 class="rz-mt-4 rz-mb-2">
+                    <RadzenStack Gap="1rem">
+                        <RadzenRow>
+                            <RadzenColumn Size="2">
+                                <RadzenText>
+                                    <strong>Própria/Arrendada</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>Área&nbsp;Total</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText>
+                                    <strong>Agricultável</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>%&nbsp;Agricultável</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>%&nbsp;Área&nbsp;Arrendada</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenText TextAlign="TextAlign.Center">
+                                    <strong>Localização</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn TextAlign="TextAlign.Center">
+                                <RadzenText>
+                                    <strong>Risco&nbsp;Região</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn TextAlign="TextAlign.Center">
+                                <RadzenText>
+                                    <strong>Solo&nbsp;Predominante</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn TextAlign="TextAlign.Center">
+                                <RadzenText>
+                                    <strong>Área&nbsp;Abertura?</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                        </RadzenRow>
+
+                        <RadzenRow> <!-- Própria -->
+                            <RadzenColumn Size="2">
+                                <RadzenText>
+                                    <strong>Própria (HA)</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="0%"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                @*<RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="0%"
+                                    TValue="int"
+                                    Disabled="true"
+                                />*@
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                @*<RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />*@
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                        </RadzenRow><!-- Própria -->
+
+                        <RadzenRow> <!-- Arrendada -->
+                            <RadzenColumn Size="2">
+                                <RadzenText>
+                                    <strong>Arrendada (HA)</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="0%"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="0%"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                @*<RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />*@
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                        </RadzenRow><!-- Arrendada -->
+
+                        <RadzenRow> <!-- TOTAL -->
+                            <RadzenColumn Size="2">
+                                <RadzenText>
+                                    <strong>TOTAL (HA)</strong>
+                                </RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="--"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenTextBox
+                                    Style="width: 100%;"
+                                    Placeholder="0%"
+                                    TValue="int"
+                                    Disabled="true"
+                                />
+                            </RadzenColumn>
+                            <RadzenColumn>
+
+                            </RadzenColumn>
+                            <RadzenColumn>
+
+                            </RadzenColumn>
+                            <RadzenColumn>
+
+                            </RadzenColumn>
+                            <RadzenColumn>
+                                <RadzenDropDown Data="@soloPredominante"
+                                                Style="max-width: 140px;"
+                                                TValue="string"
+                                                Placeholder="escolha"
+                                                Name="SoloPredominante"/>
+                            </RadzenColumn>
+                            <RadzenColumn>
+                            </RadzenColumn>
+                        </RadzenRow><!-- TOTAL -->
+
+                    </RadzenStack>
+
+
+                    <!--suppress CssUnresolvedCustomProperty -->
+                    <RadzenStack
+                        Style="border-top: var(--rz-panel-menu-item-border);"
+                        Orientation="Orientation.Horizontal"
+                        JustifyContent="JustifyContent.Center"
+                        Gap="1rem"
+                        class="rz-mt-4 rz-mb-2 rz-pt-2"
+                    >
                         <RadzenButton Icon="save" Text="Salvar Áreas"/>
                     </RadzenStack>
                 </ChildContent>
