@@ -35,10 +35,60 @@
                         </RadzenColumn>
                     </RadzenRow>
 
-                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
+                    <RadzenRow class="rz-mt-4">
+                        <RadzenColumn Size="12">
+                            <!--suppress CssUnresolvedCustomProperty -->
+                            <RadzenText
+                                Text="Maquinários"
+                                TextStyle="TextStyle.H5"
+                                TagName="TagName.H5"
+                                Style="border-bottom: var(--rz-panel-menu-item-border);color: #4340d2;"
+                                TextAlign="TextAlign.Center"/>
+                        </RadzenColumn>
+                        <RadzenColumn Size="12">
+                            <RadzenDataGrid PageSize="5" AllowPaging="true" AllowSorting="true" Data="@_employees">
+                                <Columns>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.FirstName)" Title="Maquinários" />
+                                    <RadzenDataGridColumn Property="@nameof(Employee.LastName)" Title="Descrição"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.LastName)" Title="Área (ha)"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Country)" Title="Valor"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Notes)" Title="Onerado"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Notes)" Title="Penhorável"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Notes)" Title="Matricula Enviada"/>
+                                </Columns>
+                            </RadzenDataGrid>
+                        </RadzenColumn>
+                    </RadzenRow>
+
+                    <RadzenRow class="rz-mt-4">
+                        <RadzenColumn Size="12">
+                            <!--suppress CssUnresolvedCustomProperty -->
+                            <RadzenText
+                                Text="Estoques e Rebanhos"
+                                TextStyle="TextStyle.H5"
+                                TagName="TagName.H5"
+                                Style="border-bottom: var(--rz-panel-menu-item-border);color: #4340d2;"
+                                TextAlign="TextAlign.Center"/>
+                        </RadzenColumn>
+                        <RadzenColumn Size="12">
+                            <RadzenDataGrid PageSize="5" AllowPaging="true" AllowSorting="true" Data="@_employees">
+                                <Columns>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.FirstName)" Title="Estoques e Rebanhos" />
+                                    <RadzenDataGridColumn Property="@nameof(Employee.LastName)" Title="Descrição"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.LastName)" Title="Área (ha)"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Country)" Title="Valor"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Notes)" Title="Onerado"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Notes)" Title="Penhorável"/>
+                                    <RadzenDataGridColumn Property="@nameof(Employee.Notes)" Title="Matricula Enviada"/>
+                                </Columns>
+                            </RadzenDataGrid>
+                        </RadzenColumn>
+                    </RadzenRow>
+
+                    @*<RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem"
                                  class="rz-mt-4 rz-mb-2">
                         <RadzenButton Icon="save" Text="Salvar Bens e Créditos"/>
-                    </RadzenStack>
+                    </RadzenStack>*@
                 </ChildContent>
             </RadzenFieldset>
         </RadzenCard>
